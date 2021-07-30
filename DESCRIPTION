@@ -1,0 +1,27 @@
+Package: BayesianDLAG
+Type: Package
+Title: Variable selection and interactions within distributed lag framework
+Version: 0.1.0
+Author: Joseph Antonelli
+Maintainer: Joseph Antonelli <jantonelli111@gmail.com>
+Description: We use spike and slab priors to perform variable selection on both main effect and interaction distributed lag surfaces.
+License: GPL (>= 2)
+LazyData: TRUE
+URL: https://github.com/jantonelli111/BayesianDLAG
+BugReports: https://github.com/jantonelli111/BayesianDLAG/issues
+RoxygenNote: 7.0.0
+Suggests:
+    ggplot2,
+    glmnet,
+    npreg,
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+Imports:
+    mvtnorm,
+    statmod,
+    truncnorm,
+    splines,
+    refund,
+    npreg
