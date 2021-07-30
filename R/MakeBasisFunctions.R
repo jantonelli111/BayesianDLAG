@@ -11,7 +11,7 @@ CreatePCA = function(x, PCAthresholdBasis) {
    ## Find the degrees of freedom of basis functions for each exposure
    for (j in 1 : p) {
      covx = cov(x[[j]])
-     pca = fpca.face(Y=covx, knots=10, pve=PCAthresholdBasis)
+     pca = refund::fpca.face(Y=covx, knots=10, pve=PCAthresholdBasis)
 
      w = dim(pca$efunctions)[2]
      df[[j]] = w
@@ -36,7 +36,7 @@ CreatePCA = function(x, PCAthresholdBasis) {
    ## Save the basis functions for the main effect DLAGs
    for (j in 1 : p) {
      covx = cov(x[[j]])
-     pca = fpca.face(Y=covx, knots=10, pve=PCAthresholdBasis)
+     pca = refund::fpca.face(Y=covx, knots=10, pve=PCAthresholdBasis)
 
      w = dim(pca$efunctions)[2]
      BasisFunctions[[j]] = matrix(0, t, dfMain)

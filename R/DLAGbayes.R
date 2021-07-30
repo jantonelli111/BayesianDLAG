@@ -112,7 +112,7 @@ DLAGbayes = function(y, x, c=NULL,
       designMain = designMain/sqrt(sigmaSqEst)
       designInt = designInt/sqrt(sigmaSqEst)
     } else {
-      ggModel = cv.glmnet(y=y, x=overallDesign)
+      ggModel = glmnet::cv.glmnet(y=y, x=overallDesign)
       sigmaSqEst = mean((y - cbind(rep(1, n), overallDesign) %*%
                            as.numeric(coef(ggModel, s="lambda.min")))^2)
 
@@ -133,7 +133,7 @@ DLAGbayes = function(y, x, c=NULL,
       designInt = designInt/sqrt(sigmaSqEst)
       c = as.matrix(c)/sqrt(sigmaSqEst)
     } else {
-      ggModel = cv.glmnet(y=y, x=cbind(overallDesign, as.matrix(c)))
+      ggModel = glmnet::cv.glmnet(y=y, x=cbind(overallDesign, as.matrix(c)))
       sigmaSqEst = mean((y - cbind(rep(1, n), overallDesign, as.matrix(c)) %*%
                            as.numeric(coef(ggModel, s="lambda.min")))^2)
 
