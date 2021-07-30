@@ -1,6 +1,6 @@
 # BayesianDLAG
 
-This is an R package to implement the ideas in Antonelli et. al (2021) to estimate ditributed lag models with multiple exposure, i.e. environmental mixtures.
+This is an R package to implement the ideas in Antonelli et. al (2021) to estimate ditributed lag models with multiple exposures, i.e. environmental mixtures.
 
 Please don't hesitate to contact Joseph Antonelli with any questions at jantonelli111@gmail.com. Please report any bugs if you encounter any as well!
 
