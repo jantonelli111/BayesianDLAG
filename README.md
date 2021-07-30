@@ -77,7 +77,7 @@ lines(1:37, data$betaMain[[1]], col=2, lwd=3)
 
 ![Alt text](images/Plot3.png)
 
-You can also extract the full posterior distribution of these quantities using the following function
+We see that the model is close to the true value (red line), and the truth is contained within the pointwise 95% credible interval. You can also extract the full posterior distribution of these quantities using the following function
 
 ```{r, eval=FALSE}
 posterior = PosteriorMainDLAG(DLAGmodel=ModelFDtau, whichExposure=1)
@@ -91,7 +91,7 @@ posteriorInt = PosteriorInteractionDLAG(DLAGmodel=ModelFDtau, whichExposures=c(1
 dim(posteriorInt)
 ```
 
-We can use this to visualize the interaction surface
+And we can use this to visualize the interaction surface
 
 ```{r, eval=FALSE}
 ## Calculate posterior mean
