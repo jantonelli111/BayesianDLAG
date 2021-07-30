@@ -9,7 +9,7 @@ License: GPL (>= 2)
 LazyData: TRUE
 URL: https://github.com/jantonelli111/BayesianDLAG
 BugReports: https://github.com/jantonelli111/BayesianDLAG/issues
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.1
 Suggests:
     ggplot2,
     glmnet,

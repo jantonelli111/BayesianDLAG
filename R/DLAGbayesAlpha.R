@@ -1,4 +1,5 @@
-#' Estimate effects of repeated exposures using distributed lag models
+#' Estimate effects of repeated exposures using distributed lag models and controls average posterior
+#' inclusion probabilities for null associations
 #'
 #'
 #' @param y                   The outcome to be analyzed
@@ -37,7 +38,7 @@
 
 
 
-DLAGbayesAlphaBothCons = function(y, x, c=NULL,
+DLAGbayesAlpha = function(y, x, c=NULL,
                               nScans = 2000, nBurn = 1000, thin = 2,
                               PCAthresholdBasis = 0.95,
                               PCAthresholdMain = 1,
