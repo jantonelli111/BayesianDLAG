@@ -1,22 +1,24 @@
 #' Estimate effects of repeated exposures using distributed lag models
 #'
 #'
-#' @param y              The outcome to be analyzed
-#' @param x              A list where each element is a matrix containing the values
-#'                       of each exposure over time
-#' @param c              An n by q matrix of additional, time invariant covariates to adjust for
-#' @param nScans         The number of MCMC scans to run
-#' @param nBurn          The number of MCMC scans that will be dropped as a burn-in
-#' @param thin           This number represents how many iterations between each scan
-#'                       that is kept
+#' @param y                   The outcome to be analyzed
+#' @param x                   A list where each element is a matrix containing the values
+#'                            of each exposure over time
+#' @param c                   An n by q matrix of additional, time invariant covariates to adjust for
+#' @param nScans              The number of MCMC scans to run
+#' @param nBurn               The number of MCMC scans that will be dropped as a burn-in
+#' @param thin                This number represents how many iterations between each scan
+#'                            that is kept
 #' @param PCAthresholdBasis   This number represents what percentage of variation we want our basis functions
-#'                       from PCA to capture from the original exposures
-#' @param PCAthresholdMain ?
-#' @param PCAthresholdInt ?
-#' @param VariableSel    Whether to perform variable selection on main effect distributed lag surfaces
-#' @param Basis          Indicates what type of basis functions to use. The default is PCA, which then
-#'                       uses the PCA threshold variable to determine how many basis functions to keep.
-#'                       The user may also input "Cubic" to get Cubic polynomial basis functions
+#'                            from PCA to capture from the original exposures
+#' @param PCAthresholdMain    The proportion of variation to keep in the main effect DLAG curves. We recommend
+#'                            leaving this parameter fixed at 1
+#' @param PCAthresholdInt     The proportion of variation to keep in the interaction DLAG surfaces We recommend
+#'                            leaving this parameter fixed at 0.999
+#' @param VariableSel         Whether to perform variable selection on main effect distributed lag surfaces
+#' @param Basis               Indicates what type of basis functions to use. The default is PCA, which then
+#'                            uses the PCA threshold variable to determine how many basis functions to keep.
+#'                            The user may also input "Cubic" to get Cubic polynomial basis functions
 #'
 #' @importFrom glmnet cv.glmnet
 #' @importFrom mvtnorm dmvnorm rmvnorm
@@ -26,7 +28,7 @@
 #'         posterior distribution for the distributed lag parameters as well as the basis functions
 #'         used to estimate their distributed lag function. These posterior distributions do not
 #'         represent the distributed lag surfaces themselves, but these can be obtained using the
-#'         other functions in the package.
+#'         other functions in the package. See PosteriorMainDLAG() and PosteriorInteractionDLAG().
 #'
 #' @export
 
