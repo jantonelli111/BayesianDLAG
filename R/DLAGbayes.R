@@ -61,8 +61,6 @@ DLAGbayes = function(y, x, c=NULL,
   ## Create basis functions for main effects and interactions
   if (Basis == "PCA") {
     createMats = CreatePCA(x=x, PCAthresholdBasis = PCAthresholdBasis)
-  } else if (Basis == "TPS") {
-    createMats = CreateTPS(x=x)
   } else {
     createMats = CreateCubic(x=x)
   }

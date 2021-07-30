@@ -38,7 +38,7 @@ DLAGbayesAlphaBothCons = function(y, x, c=NULL,
                               PCAthresholdBasis = 0.95,
                               PCAthresholdMain = 1,
                               PCAthresholdInt = 0.999,
-                              VariableSel = TRUE, Basis = "TPS",
+                              VariableSel = TRUE, Basis = "PCA",
                               alphaMain = 0.05, alphaInt = 0.01) {
 
   print("Setting up MCMC")
@@ -66,8 +66,6 @@ DLAGbayesAlphaBothCons = function(y, x, c=NULL,
   ## Create basis functions for main effects and interactions
   if (Basis == "PCA") {
     createMats = CreatePCA(x=x, PCAthresholdBasis = PCAthresholdBasis)
-  } else if (Basis == "TPS") {
-    createMats = CreateTPS(x=x)
   } else {
     createMats = CreateCubic(x=x)
   }

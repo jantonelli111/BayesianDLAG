@@ -4,8 +4,8 @@
 #' @param DLAGmodel              A fitted model from the DLAGbayes function
 #' @param whichExposure          an integer indicating which exposure is to be plotted.
 #'                               Must be between 1 and the number of exposures
-#' @param main                   ?
-#' @param ylim                   ?
+#' @param main                   The title of the plot
+#' @param ylim                   The limits of the y-axis of the plot
 #' @importFrom graphics lines
 #' @importFrom stats quantile
 #' @export
