@@ -23,5 +23,4 @@ Imports:
     statmod,
     truncnorm,
     splines,
-    refund,
-    npreg
+    refund
