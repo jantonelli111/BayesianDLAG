@@ -22,7 +22,7 @@
 #'
 #' @importFrom glmnet cv.glmnet
 #' @importFrom mvtnorm dmvnorm rmvnorm
-#' @importFrom stats lm rgamma runif rbeta cov
+#' @importFrom stats lm rgamma runif rbeta cov var rnorm coef
 #' @return A list of values that contain the posterior inclusion probabilities for the main effect
 #'         distributed lags and interaction distributed lag surfaces. The list also contains the
 #'         posterior distribution for the distributed lag parameters as well as the basis functions

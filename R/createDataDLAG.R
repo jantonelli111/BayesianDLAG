@@ -11,7 +11,9 @@
 #'                            If left NULL, exposures 1 and 2 will have an effect on the outcome.
 #' @param betaInt             Optional list of true distributed lag surfaces for each interaction
 #'                            If left NULL, exposures 1 and 2 will have an interaction effect.
-#' @importFrom mvtnorm stats
+#' @importFrom glmnet cv.glmnet
+#' @importFrom mvtnorm dmvnorm rmvnorm
+#' @importFrom stats lm rgamma runif rbeta cov var rnorm coef
 #' @export
 
 createDataDLAG = function(n=200, p=5, t=37, q=5, 
