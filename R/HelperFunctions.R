@@ -1,5 +1,5 @@
 rmnvAnder <-  function(mean,sigma){
-  drop(mean + chol(sigma)%*%rnorm(length(mean)))
+  drop(mean + t(chol(sigma))%*%rnorm(length(mean)))
 }
 
 # this leaves off the 2pi and evaluates it at 0
